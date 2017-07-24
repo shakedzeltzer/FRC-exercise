@@ -18,6 +18,10 @@ public class RobotMap {
 	
 	//Controller ports:
 	public static final int XBOX_CONTROLLER=0;
+	
+	//solenoid ports:
+	public static final int GEAR_LIFT_FORWARD=0;
+	public static final int GEAR_LEFT_REVERSE=1;
 
 	// If you are using multiple modules, make sure to define both the port
 	// number and the module. For example you with a rangefinder:

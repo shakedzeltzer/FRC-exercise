@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4320.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4320.robot.subsystems.CompressorSubsystem;
 import org.usfirst.frc.team4320.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team4320.robot.subsystems.GearLift;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -22,7 +23,8 @@ import org.usfirst.frc.team4320.robot.subsystems.ExampleSubsystem;
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
-	public static final CompressorSubsystem compressorSubsystem= CompressorSubsystem.getInstance(); 
+	public static final CompressorSubsystem compressorSubsystem= CompressorSubsystem.getInstance();
+	public static final GearLift gearLift=GearLift.getInstance();
 	public static OI oi;
 
 	Command autonomousCommand;
