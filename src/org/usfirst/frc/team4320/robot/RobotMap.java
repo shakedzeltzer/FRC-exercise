@@ -22,6 +22,10 @@ public class RobotMap {
 	//solenoid ports:
 	public static final int GEAR_LIFT_FORWARD=0;
 	public static final int GEAR_LEFT_REVERSE=1;
+	
+	public static final int GEAR_PICK_FORWARD=2;
+	public static final int GEAR_PICK_REVERSE=3;
+
 
 	// If you are using multiple modules, make sure to define both the port
 	// number and the module. For example you with a rangefinder:

@@ -6,6 +6,8 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team4320.robot.commands.CompressorCommand;
 import org.usfirst.frc.team4320.robot.commands.ExampleCommand;
+import org.usfirst.frc.team4320.robot.commands.GearLiftCommand;
+import org.usfirst.frc.team4320.robot.commands.GearPickCommand;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -25,11 +27,17 @@ public class OI {
 	// commands the same as any other Button.
 	private XboxController xboxControler;
 	private JoystickButton CompressorButton;
+	private JoystickButton gearLiftButton;
+	private JoystickButton gearPickButton;
 	public OI() {
 		xboxControler=new XboxController(RobotMap.XBOX_CONTROLLER);
 		CompressorButton=new JoystickButton(xboxControler,1); //A button
+		gearLiftButton=new JoystickButton(xboxControler,4); //Y button
+		gearPickButton=new JoystickButton(xboxControler,3); //___ button
 		
 		CompressorButton.toggleWhenPressed(new CompressorCommand());
+		gearLiftButton.toggleWhenPressed(new GearLiftCommand());
+		gearPickButton.toggleWhenPressed(new GearPickCommand());
 	}
 	
 	public XboxController getController() {
