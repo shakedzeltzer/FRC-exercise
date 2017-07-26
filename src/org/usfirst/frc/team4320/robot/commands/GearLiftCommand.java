@@ -15,7 +15,7 @@ public class GearLiftCommand extends Command {
 	protected void initialize() {
 	}
 	
-	// Called repeatedly when this Command is scheduled to run
+	//switch the sides of the DoubleSolenoid
 	@Override
 	protected void execute() {
 		
@@ -30,7 +30,7 @@ public class GearLiftCommand extends Command {
 			
 	}
 		
-	// Make this return true when this Command no longer needs to run execute()
+	//when the pressure is below 40 PSI, it stops
 	@Override
 	protected boolean isFinished() {
 		if(Robot.compressorSubsystem.getCompressorPressure()<=40)

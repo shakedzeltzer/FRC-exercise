@@ -18,8 +18,8 @@ public class GearLift extends Subsystem {
 	
 	private GearLift() {
 		gearLiftSol=new DoubleSolenoid(RobotMap.GEAR_LIFT_FORWARD, RobotMap.GEAR_LEFT_REVERSE);
-		setPistonValue(DoubleSolenoid.Value.kForward);
-	}
+		setPistonValue(DoubleSolenoid.Value.kForward); //initial the DoubleSolenoid as Kforward;
+	} 
 	
 	public void setPistonValue(DoubleSolenoid.Value PistonValue) {
 		gearLiftSol.set(PistonValue);

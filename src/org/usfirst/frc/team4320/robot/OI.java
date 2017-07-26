@@ -33,9 +33,9 @@ public class OI {
 		xboxControler=new XboxController(RobotMap.XBOX_CONTROLLER);
 		CompressorButton=new JoystickButton(xboxControler,1); //A button
 		gearLiftButton=new JoystickButton(xboxControler,4); //Y button
-		gearPickButton=new JoystickButton(xboxControler,3); //___ button
+		gearPickButton=new JoystickButton(xboxControler,3); //X button
 		
-		CompressorButton.toggleWhenPressed(new CompressorCommand());
+		CompressorButton.toggleWhenPressed(new CompressorCommand()); //compressor toggle closed loop
 		gearLiftButton.toggleWhenPressed(new GearLiftCommand());
 		gearPickButton.toggleWhenPressed(new GearPickCommand());
 	}

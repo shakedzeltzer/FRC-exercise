@@ -22,18 +22,21 @@ public class CompressorSubsystem extends Subsystem {
 		robotCompressor=new Compressor();
 		compSensor=new AnalogInput(RobotMap.COMP_ANALOG_SENSOR);
 	}
+	//gets the compressor state (forward/backward/off)
 	public boolean getCompressorState() {
-		return robotCompressor.getClosedLoopControl();
+		return robotCompressor.getClosedLoopControl(); 
 	}
 	
+	//put the compressor in closed loop mode
 	public void setCompressorClosedLoop(boolean state) {
-		robotCompressor.setClosedLoopControl(state);
+		robotCompressor.setClosedLoopControl(state); 
 	}
 	
 	public double getCompressorPressure() {
 		return 250*(compSensor.getValue()/5)-25;	
 		//convert the voltage value to PSI value;
 	}
+	//put the pressure status on the smartDashboard
 	public void updatePressureStatus() {
 		SmartDashboard.putNumber("CompressorPrussure",getCompressorPressure());
 	}

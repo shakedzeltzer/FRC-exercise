@@ -11,7 +11,7 @@ public class CompressorCommand extends Command{
 	protected void initialize() {
 	}
 
-	// Called repeatedly when this Command is scheduled to run
+	//put the compressor state in the opposite state
 	@Override
 	protected void execute() {
 		Robot.compressorSubsystem.setCompressorClosedLoop(!Robot.compressorSubsystem.getCompressorState());

@@ -19,7 +19,7 @@ public class RobotMap {
 	//Controller ports:
 	public static final int XBOX_CONTROLLER=0;
 	
-	//solenoid ports:
+	//DoubleSolenoid ports:
 	public static final int GEAR_LIFT_FORWARD=0;
 	public static final int GEAR_LEFT_REVERSE=1;
 	

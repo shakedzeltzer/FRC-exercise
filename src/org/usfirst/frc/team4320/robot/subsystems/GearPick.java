@@ -17,7 +17,7 @@ public class GearPick extends Subsystem {
 	
 	private GearPick() {
 		gearPickSol=new DoubleSolenoid(RobotMap.GEAR_PICK_FORWARD, RobotMap.GEAR_PICK_REVERSE);
-		setPistonValue(DoubleSolenoid.Value.kForward);
+		setPistonValue(DoubleSolenoid.Value.kForward); //initial the DoubleSolenoid as Kforward;
 	}
 	
 	public void setPistonValue(DoubleSolenoid.Value PistonValue) {
