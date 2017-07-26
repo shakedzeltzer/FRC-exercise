@@ -5,6 +5,7 @@ import org.usfirst.frc.team4320.robot.RobotMap;
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class CompressorSubsystem extends Subsystem {
 	
@@ -17,7 +18,6 @@ public class CompressorSubsystem extends Subsystem {
 			instance=new CompressorSubsystem();
 		return instance;
 	}
-	
 	private CompressorSubsystem() {
 		robotCompressor=new Compressor();
 		compSensor=new AnalogInput(RobotMap.COMP_ANALOG_SENSOR);
@@ -33,6 +33,9 @@ public class CompressorSubsystem extends Subsystem {
 	public double getCompressorPressure() {
 		return 250*(compSensor.getValue()/5)-25;	
 		//convert the voltage value to PSI value;
+	}
+	public void updatePressureStatus() {
+		SmartDashboard.putNumber("CompressorPrussure",getCompressorPressure());
 	}
 	
 	@Override
