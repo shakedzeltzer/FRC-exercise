@@ -21,11 +21,7 @@ public class GearLiftCommand extends Command {
 		
 		if(Robot.gearLift.getDoubleSol().get()==DoubleSolenoid.Value.kForward)
 			Robot.gearLift.setPistonValue(DoubleSolenoid.Value.kReverse);
-		
-		else if (Robot.gearLift.getDoubleSol().get()==DoubleSolenoid.Value.kReverse)
-			Robot.gearLift.setPistonValue(DoubleSolenoid.Value.kForward);
-		
-		else if (Robot.gearLift.getDoubleSol().get()==DoubleSolenoid.Value.kOff)
+		else
 			Robot.gearLift.setPistonValue(DoubleSolenoid.Value.kForward);
 			
 	}

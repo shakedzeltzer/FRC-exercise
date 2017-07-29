@@ -18,11 +18,7 @@ public class GearPickCommand extends Command {
 	protected void execute() {	
 		if(Robot.gearPick.getDoubleSol().get()==DoubleSolenoid.Value.kForward)
 			Robot.gearPick.setPistonValue(DoubleSolenoid.Value.kReverse);
-		
-		else if (Robot.gearPick.getDoubleSol().get()==DoubleSolenoid.Value.kReverse)
-			Robot.gearPick.setPistonValue(DoubleSolenoid.Value.kForward);
-		
-		else if (Robot.gearPick.getDoubleSol().get()==DoubleSolenoid.Value.kOff)
+		else
 			Robot.gearPick.setPistonValue(DoubleSolenoid.Value.kForward);
 			
 	}
